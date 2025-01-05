@@ -1,50 +1,44 @@
-# Welcome to your Expo app 👋
+# Login and SignUp Project
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This project is a React Native application made with Bun using Expo that provides a simple login and signup page.
 
-## Get started
+## Features
 
-1. Install dependencies
+- User login
+- User signup
+- Form validation
+- Error handling
 
-   ```bash
+## Installation
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/yourusername/login_signUp.git
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd login_signUp
+   ```
+3. Install the dependencies:
+   ```sh
    npm install
    ```
 
-2. Start the app
+## Usage
 
-   ```bash
-    npx expo start
+1. Start the development server:
+   ```sh
+   bun start
+   ```
+2. Run the application on an emulator or physical device:
+   ```sh
+   bun run android
    ```
 
-In the output, you'll find options to open the app in a
+## Contributing
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Contributions are welcome! Please open an issue or submit a pull request for any changes.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## License
 
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+This project is licensed under the MIT License.
