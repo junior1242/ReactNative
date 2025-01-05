@@ -10,7 +10,7 @@ const fs = require("fs");
 const path = require("path");
 
 const root = process.cwd();
-const oldDirs = ["app", "components", "hooks", "constants", "scripts"];
+const oldDirs = ["app", "components", "hooks", "constants"];
 const newDir = "app-example";
 const newAppDir = "app";
 const newDirPath = path.join(root, newDir);
