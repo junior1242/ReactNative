@@ -6,8 +6,6 @@ This project is a React Native application made with Bun using Expo that provide
 
 - User login
 - User signup
-- Form validation
-- Error handling
 
 ## Installation
 
@@ -21,7 +19,7 @@ This project is a React Native application made with Bun using Expo that provide
    ```
 3. Install the dependencies:
    ```sh
-   npm install
+   bun install
    ```
 
 ## Usage
@@ -34,10 +32,6 @@ This project is a React Native application made with Bun using Expo that provide
    ```sh
    bun run android
    ```
-
-## Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request for any changes.
 
 ## License
 

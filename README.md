@@ -3,3 +3,4 @@
 - Stack Navigations   
 - Tab Navigations
 - Drawer Navigations
+- Login and SignUp page
