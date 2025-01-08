@@ -22,7 +22,7 @@ const Login = () => {
           width: "100%",
           height: 300,
         }}
-        resizeMode="contain"
+        resizeMode="cover"
       />
 
       <View
