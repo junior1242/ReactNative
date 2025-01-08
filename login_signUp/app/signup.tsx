@@ -12,9 +12,10 @@ const Signup = () => {
     <View
       style={{
         flex: 1,
+        backgroundColor:"white"
       }}>
       <Image
-        source={require("@/assets/images/signup.jpg")}
+        source={require("@/assets/images/SignUp.jpeg")}
         style={{
           width: "100%",
           height: 300,
@@ -24,8 +25,7 @@ const Signup = () => {
 
       <View
         style={{
-          padding: 20,
-          marginHorizontal: 20,
+          padding: 10,
           backgroundColor: "white",
         }}
       >
@@ -67,18 +67,20 @@ const styles = StyleSheet.create({
     height: 50,
     borderRadius: 10,
     marginBottom: 5,
-    padding: 20,
+    padding: 10,
     borderWidth: 0.1,
     borderColor: "gray",
   },
-  icons: {
-    flex: 1,
-    alignItems: "center",
-  },
+  // icons: {
+  //   flex: 1,
+  //   alignItems: "center",
+  //   marginTop:10
+  // },
   icon: {
-    flex: 3,
+    flex: 1,
     flexDirection: "row",
     justifyContent: "center",
     gap: 20,
+    marginTop:10
   },
 });

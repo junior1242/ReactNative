@@ -1,9 +1,9 @@
-import { View, Text, ImageBackground, Image, TextInput,StyleSheet, TouchableOpacity } from "react-native";
+import { View, Text, Image, TextInput,StyleSheet, TouchableOpacity } from "react-native";
 import React from "react";
 import { Link, useRouter } from "expo-router";
 import MyButton from "@/components/myButton";
 import { FontAwesome } from "@expo/vector-icons";
-// import Svg, { Path } from "react-native-svg";
+
 const Login = () => {
   
   const router = useRouter();
@@ -14,8 +14,18 @@ const Login = () => {
     <View
       style={{
         flex: 1,
+        backgroundColor: "white",
       }}
     >
+      <View
+        style={{
+          flex: 1,
+          alignItems: "flex-end",
+          marginRight: 8,
+        }}
+      >
+        <Text>Need Help?</Text>
+      </View>
       <Image
         source={require("@/assets/images/login.jpg")}
         style={{
@@ -28,7 +38,7 @@ const Login = () => {
       <View
         style={{
           padding: 20,
-          marginHorizontal: 20,
+          // marginHorizontal: 20,
           backgroundColor: "white",
         }}
       >
@@ -42,8 +52,15 @@ const Login = () => {
           secureTextEntry={true}
           style={styles.input}
         />
+      </View>
+      <View
+        style={{
+          alignItems: "center",
+        }}
+      >
         <MyButton title={"Login"} onPress={onlogin} />
       </View>
+      
       <View style={styles.icons}>
         <Text>
           Don't Have any Account?{" "}
@@ -55,13 +72,13 @@ const Login = () => {
       <View style={styles.icon}>
         <TouchableOpacity>
           <FontAwesome name="google" size={30} color="#DB4437" />
-          </TouchableOpacity> 
-       <TouchableOpacity>
+        </TouchableOpacity>
+        <TouchableOpacity>
           <FontAwesome name="facebook" size={30} color="#316FF6" />
-          </TouchableOpacity>
-        </View>  
+        </TouchableOpacity>
+      </View>
     </View>
-  )
+  );
 }
 export default Login;
 
