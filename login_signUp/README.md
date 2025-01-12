@@ -4,8 +4,10 @@ This project is a React Native application made with Bun using Expo that provide
 
 ## Features
 
-- User login
+- User login 
 - User signup
+- UseState Hook
+- UseEffect Hook
 
 ## Installation
 
