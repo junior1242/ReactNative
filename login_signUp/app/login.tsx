@@ -1,15 +1,37 @@
-import { View, Text, Image, TextInput,StyleSheet, TouchableOpacity } from "react-native";
-import React from "react";
+import {
+  View,
+  Text,
+  Image,
+  TextInput,
+  StyleSheet,
+  TouchableOpacity,
+
+} from "react-native";
+import React, { useEffect, useState } from "react";
 import { Link, useRouter } from "expo-router";
 import MyButton from "@/components/myButton";
 import { FontAwesome } from "@expo/vector-icons";
 
 const Login = () => {
+  const [value, setValue] = useState({
+    value1:"",
+    value2:"",
+  });
+  // const [Password, setPassword] = useState("");
   
   const router = useRouter();
-  const onlogin = () => {
-    router.navigate("/signup");
-  };
+  // const onlogin = () => {
+    // console.log((Number(value) + Number(Password)).toFixed(2));
+    // console.log("Password is : ", Password);
+    // };
+    
+    const Sum = () => {
+      console.log(Number(value.value1) + Number(value.value2));
+  }
+    useEffect(() => {
+      console.log("useEffect is called");
+    });
+  
   return (
     <View
       style={{
@@ -43,14 +65,16 @@ const Login = () => {
         }}
       >
         <TextInput
-          placeholder="Enter Your Email"
+          placeholder="Enter Your Gmail"
           style={styles.input}
-          onChange={(e) => console.log(e.nativeEvent.text)}
+          onChangeText={(e) => setValue((prev) => ({ ...prev, value1: e }))}
         />
         <TextInput
           placeholder="Enter Your Password"
-          secureTextEntry={true}
           style={styles.input}
+          onChangeText={(e) => setValue((prev) => ({ ...prev, value2: e }))}
+          // secureTextEntry={true}
+          // onChangeText={(e) => setPassword(e)}
         />
       </View>
       <View
@@ -58,9 +82,9 @@ const Login = () => {
           alignItems: "center",
         }}
       >
-        <MyButton title={"Login"} onPress={onlogin} />
+        <MyButton title={"Login"} onPress={Sum} />
       </View>
-      
+
       <View style={styles.icons}>
         <Text>
           Don't Have any Account?{" "}
@@ -79,10 +103,8 @@ const Login = () => {
       </View>
     </View>
   );
-}
+};
 export default Login;
-
-
 
 const styles = StyleSheet.create({
   input: {
@@ -93,15 +115,14 @@ const styles = StyleSheet.create({
     borderWidth: 0.1,
     borderColor: "gray",
   },
-  icons:{
+  icons: {
     flex: 1,
     alignItems: "center",
   },
-  icon:{
+  icon: {
     flex: 3,
     flexDirection: "row",
     justifyContent: "center",
-    gap:20
+    gap: 20,
   },
-  },
-)
+});
