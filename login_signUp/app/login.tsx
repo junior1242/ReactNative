@@ -30,7 +30,7 @@ const Login = () => {
   }
     useEffect(() => {
       console.log("useEffect is called");
-    });
+    },[value?.value1]);
   
   return (
     <View
