@@ -7,22 +7,30 @@ const Index = () => {
       <View style={styles.topContainer}>
         <Text style={styles.headerTitle}>Leaderboard</Text>
         <View style={styles.mainCardContainer}>
-          {[3, 1, 2].map((item, index) => {
-            return <View key={index} style={[styles.mainCard,item !== 1 && {marginTop:20,}]}>
-              <Image source={{ uri: "https://picsum.photos/200/300" }} style={styles.mainCardImage}
-                resizeMode='cover' />
-              <Text style={styles.mainCardTitle}>Shahid</Text>
-              <View style={styles.mainCardRankContainer}>
-                <Text style={styles.mainCardRankContainerText}>{item}</Text>
+          {[3, 1, 2].map(( item, index) => {
+            return (
+              <View
+                key={index}
+                style={[styles.mainCard, item !== 1 && { marginTop: 20 }]}
+              >
+                <Image
+                  source={{ uri: "https://picsum.photos/200/300" }}
+                  style={styles.mainCardImage}
+                  resizeMode="cover"
+                />
+                <Text style={styles.mainCardTitle}>Shahid</Text>
+                <View style={styles.mainCardRankContainer}>
+                  <Text style={styles.mainCardRankContainerText}>{item}</Text>
+                </View>
               </View>
-            </View>;
+            );
           })}
         </View>
       </View>
 
-
       <FlatList
-        data={[1, 2, 3,4,5,6,7,7,8,9,9,7,6,4,3,22,4,5,67,5]}
+        showsVerticalScrollIndicator={false}
+        data={ListData}
         renderItem={({ item, index }) => {
           return (
             <View style={styles.card}>
@@ -30,16 +38,16 @@ const Index = () => {
                 <Text style={styles.cardIndex}>{index + 1}</Text>
                 <Image
                   source={{
-                    uri: "https://images.pexels.com/photos/8159657/pexels-photo-8159657.jpeg?auto=compress&cs=tinysrgb&w=600",
+                    uri: item.imageUrl,
                   }}
                   style={styles.cardImage}
                   resizeMode="cover"
                 />
-                <Text style={styles.cardTitle}>walid</Text>
+                <Text style={styles.cardTitle}>{item.name}</Text>
               </View>
 
               <View style={styles.cardRankContainer}>
-                <Text style={styles.cardRankTitle}>321,234</Text>
+                <Text style={styles.cardRankTitle}> {item.score} </Text>
               </View>
             </View>
           );
@@ -139,3 +147,50 @@ const styles = StyleSheet.create({
 })
 
 export default Index
+
+
+// const RankData = [
+//   {
+//     name: "Shahid Ali",
+//     imageUrl: "https://picsum.photos/200/300",
+//   },
+//   {
+//     name: "Ali Hassan",
+//     imageUrl: "https://picsum.photos/200/300",
+//   },
+//   {
+//     name: "Umer Akram",
+//     imageUrl: "https://picsum.photos/200/300",
+//   },
+// ];
+
+
+const ListData = [
+  {
+    score: "890,322",
+    name: "Umer Abad",
+    imageUrl: "https://picsum.photos/200",
+  },
+  {
+    score: "345,322",
+    name: "Waleed Baharwal",
+    imageUrl: "https://picsum.photos/200",
+  },
+  {
+    score: "123,422",
+    name: "Hussnain Javaid",
+    imageUrl:
+      "https://images.pexels.com/photos/8159657/pexels-photo-8159657.jpeg?auto=compress&cs=tinysrgb&w=600",
+  },
+  {
+    score: "353,633",
+    name: "Bilal Rafiq",
+    imageUrl: "https://picsum.photos/200",
+  },
+  {
+    score: "354,452",
+    name: "Muhammad Salman",
+    imageUrl:
+      "https://images.pexels.com/photos/8159657/pexels-photo-8159657.jpeg?auto=compress&cs=tinysrgb&w=600",
+  },
+];
