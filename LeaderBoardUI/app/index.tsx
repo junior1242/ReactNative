@@ -1,5 +1,5 @@
-import { View, Text, StyleSheet, Image, FlatList } from 'react-native'
-import React from 'react'
+import { View, Text, StyleSheet, Image, FlatList } from "react-native";
+import React from "react";
 
 const Index = () => {
   return (
@@ -7,7 +7,7 @@ const Index = () => {
       <View style={styles.topContainer}>
         <Text style={styles.headerTitle}>Leaderboard</Text>
         <View style={styles.mainCardContainer}>
-          {[3, 1, 2].map(( item, index) => {
+          {[3, 1, 2].map((item, index) => {
             return (
               <View
                 key={index}
@@ -35,7 +35,7 @@ const Index = () => {
           return (
             <View style={styles.card}>
               <View style={styles.cardDataContainer}>
-                <Text style={styles.cardIndex}>{index + 1}</Text>
+                <Text style={styles.cardIndex}>{index + 4}</Text>
                 <Image
                   source={{
                     uri: item.imageUrl,
@@ -55,7 +55,7 @@ const Index = () => {
       />
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -75,12 +75,12 @@ const styles = StyleSheet.create({
     textAlign: "center",
     color: "white",
     fontSize: 21,
-    fontWeight:"bold"
+    fontWeight: "bold",
   },
   mainCardContainer: {
     flexDirection: "row",
     gap: 5,
-    justifyContent:"center",
+    justifyContent: "center",
   },
   mainCard: {
     backgroundColor: "#272C35",
@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
   mainCardTitle: {
     color: "white",
     fontSize: 17,
-    fontWeight:600,
+    fontWeight: 600,
   },
   mainCardRankContainer: {
     backgroundColor: "orange",
@@ -107,47 +107,45 @@ const styles = StyleSheet.create({
     alignItems: "center",
     borderRadius: 30,
     position: "absolute",
-    bottom:-15
+    bottom: -15,
   },
   mainCardRankContainerText: {
-    color:"white"
+    color: "white",
   },
   card: {
     padding: 15,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    margin:10
+    margin: 10,
   },
   cardDataContainer: {
     flexDirection: "row",
     alignItems: "center",
     gap: 20,
-    
   },
   cardIndex: {
     color: "white",
-    marginLeft:15
+    marginLeft: 15,
   },
   cardImage: {
     width: 50,
     height: 50,
     borderRadius: 50,
-    marginLeft:10,
+    marginLeft: 10,
   },
   cardTitle: {
     color: "white",
-    fontSize:20,
+    fontSize: 20,
   },
-  cardRankContainer:{},
+  cardRankContainer: {},
   cardRankTitle: {
     color: "orange",
-    fontSize:20
+    fontSize: 20,
   },
-})
+});
 
-export default Index
-
+export default Index;
 
 // const RankData = [
 //   {
@@ -163,7 +161,6 @@ export default Index
 //     imageUrl: "https://picsum.photos/200/300",
 //   },
 // ];
-
 
 const ListData = [
   {

@@ -4,3 +4,4 @@
 - Tab Navigations
 - Drawer Navigations
 - Login and SignUp page
+- Splash Screen
